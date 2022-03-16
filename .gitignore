@@ -1,3 +1,5 @@
+docker/data/*
+*.bak
 */config/development
 */logs/log-*.php
 !*/logs/index.html
