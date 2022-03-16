@@ -1,0 +1,5 @@
+node_modules/
+.github/
+Dockerfile
+.editorconfig
+docker-compose*.yml
