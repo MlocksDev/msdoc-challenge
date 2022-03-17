@@ -33,9 +33,9 @@ class Doctors_model extends CI_Model
         return $this->getResults();
     }
 
-    public function searchAll($term, $orderByName = true, $groupBy = false)
+    public function searchAll($term, $orderByName = true)
     {
-        $this->setupSQL($orderByName, $groupBy);
+        $this->setupSQL($orderByName);
 
         if ($term) {
             $this->db->where("name LIKE '%$term%' OR lastname LIKE '%$term%'");
@@ -44,14 +44,19 @@ class Doctors_model extends CI_Model
         return $this->getResults();
     }
 
+    public function orderAllBy($field, $orderBy)
+    {
 
-    private function setupSQL($orderByName, $groupBy)
+        $this->db->from($this->table);
+        $this->db->order_by($field, $orderBy);
+
+        return $this->getResults();
+    }
+
+
+    private function setupSQL($orderByName)
     {
         $this->db->from($this->table);
-
-        if ($groupBy) {
-            $this->db->group_by('name');
-        }
 
         if ($orderByName) {
             $this->db->order_by('name', 'ASC');

@@ -21,10 +21,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<hr>
 		<table>
 			<tr>
-				<th>Name</th>
-				<th>Lastname</th>
-				<th>crm</th>
-				<th>category</th>
+				<th><a href="<?= base_url('doctors/order?field=name&orderby=DESC') ?>">name</a></th>
+				<th><a href="<?= base_url('doctors/order?field=lastname&orderby=DESC') ?>">lastname</a></th>
+				<th><a href="<?= base_url('doctors/order?field=crm&orderby=DESC') ?>">crm</a></th>
+				<th><a href="<?= base_url('doctors/order?field=category&orderby=DESC') ?>">category</a></th>
 			</tr>
 
 			<?php foreach ($listDoctors as $doctor) : ?>

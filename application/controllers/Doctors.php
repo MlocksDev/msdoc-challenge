@@ -50,4 +50,15 @@ class Doctors extends CI_Controller
 		$this->load->vars('listDoctors', $listDoctors);
 		$this->load->view('doctors');
 	}
+
+	public function order()
+	{
+		$field  = $this->input->get('field', true);
+		$orderby  = $this->input->get('orderby', true);
+
+		$listDoctors = $this->Doctors_model->orderAllBy($field, $orderby);
+
+		$this->load->vars('listDoctors', $listDoctors);
+		$this->load->view('doctors');
+	}
 }
