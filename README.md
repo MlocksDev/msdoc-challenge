@@ -110,5 +110,3 @@ Clique em [Codeigniter](codeigniter.rst) para mais informações sobre a framewo
 - [MySQL 5.6 Reference Manual](https://dev.mysql.com/doc/refman/5.6/en/)
 - [mysql - Docker Hub](https://hub.docker.com/_/mysql)
 - [mysql - Docker Documentation](https://docs.docker.com/samples/library/mysql/)
-- [PhpFastCache - A PHP library made for building reactive apps](https://www.phpfastcache.com/)
-- [Sufee Admin - HTML5 Admin Template](https://colorlib.com/polygon/sufee/)
